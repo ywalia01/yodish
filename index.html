@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yoda</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"
+        />
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="stylesheets/main.css" />
+
+        <!-- DARK READER============================================================ -->
+        <link
+            disabled
+            id="dark-reader"
+            rel="stylesheet"
+            href="stylesheets/dark.css"
+        />
+        <script>
+            function dark_toggle() {
+                var el1 = document.getElementById("dark-reader");
+                if (el1.disabled) {
+                    el1.disabled = false;
+                    localStorage.setItem("darkreader", "enabled");
+                } else {
+                    el1.disabled = true;
+                    localStorage.setItem("darkreader", "disabled");
+                }
+            }
+        </script>
+        <script>
+            if (localStorage.getItem("darkreader") == "enabled") {
+                document.getElementById("dark-reader").disabled = false;
+            } else {
+                document.getElementById("dark-reader").disabled = true;
+            }
+        </script>
+        <!-- DARK READER============================================================ -->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded">
+            <a class="navbar-brand" href="#">API Camp</a>
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="javascript:void(0)"
+                        onclick="dark_toggle();return false;"
+                        title="Toggle night mode"
+                        >Dark
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        target="_blank"
+                        href="http://www.catb.org/hacker-emblem/"
+                    >
+                        <img id="bootstrap-override height=" 25" width="25"
+                        src="http://www.catb.org/hacker-emblem/glider.png"
+                        alt="hacker emblem" /></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <h1>English to Yodish Converter</h1>
+        <img id="yodaimg" src="stoneryoda.png" />
+
+        <section class="container">
+            <textarea name="" id="req" cols="40" rows="4"></textarea>
+        </section>
+        <br />
+        <section class="container">
+            <button id="btn">Convert</button>
+        </section>
+        <section class="container">
+            <p id="out" style="width: 341px; height: 66px;">
+                Output Text
+            </p>
+        </section>
+
+        <script src="index.js"></script>
+    </body>
+</html>
+
+<div class="collapse navbar-collapse" id="navb">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Disabled</a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+        <button class="btn btn-success my-2 my-sm-0" type="button">
+            Search
+        </button>
+    </form>
+</div>
