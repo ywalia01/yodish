@@ -6,35 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yodish</title>
     <link rel="stylesheet" href="stylesheets/main.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" href="stylesheets/main.css" />
-    
-    <!-- DARK READER============================================================ -->
-    <link disabled id="dark-reader" rel="stylesheet" href="stylesheets/dark.css" />
-    <script>
-        function dark_toggle() {
-            var el1 = document.getElementById("dark-reader");
-            if (el1.disabled) {
-                el1.disabled = false;
-                localStorage.setItem("darkreader", "enabled");
-            } else {
-                el1.disabled = true;
-                localStorage.setItem("darkreader", "disabled");
-            }
-        }
-    </script>
-    <script>
-        if (localStorage.getItem("darkreader") == "enabled") {
-            document.getElementById("dark-reader").disabled = false;
-        } else {
-            document.getElementById("dark-reader").disabled = true;
-        }
-    </script>
-    <!-- DARK READER============================================================ -->
 </head>
 
 <body>
